@@ -58,6 +58,7 @@ pipeline {
                 // withKubeConfig([credentialsId: 'k8suser', serverUrl: 'https://10.0.2.5:6443' ]) {
                     //sh 'kubectl get nodes'
                    //}
+                sh "whoami"
                 sh "kubectl get nodes"
                 sh "kubectl  apply  -f  k8s-deployment.yml"
             }
